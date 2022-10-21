@@ -11,6 +11,38 @@
     <link href="template.css" type="text/css" rel="stylesheet">
    
     <script type="text/javascript">
+        function GetSelectedItem() {
+
+            window.open("index.html", "_self");
+        }
+        function validateForm() {
+            let examEvent = document.getElementById("Select1").value;
+            let sem = document.getElementById("PartTerm").value;
+            let x = document.getElementById("PRN").value;
+
+            if (x == "") {
+                alert("PRN must be filled out");
+
+            }
+            else if (x == "2019015200923810" && examEvent == "65" && sem == "3_2") {
+                window.open("Dr. Babasaheb Ambedkar Marathwada University2.html", "_self");
+            }
+            else if (x == "2019015200923810" && examEvent == "64" && sem == "3_1") {
+                window.open("5thSemOctNov21.html", "_self");
+            }
+            else if (x == "2019015200923810" && examEvent == "62" && sem == "2_2") {
+                window.open("4thSemAprMay21.html", "_self");
+            }
+            else if (x == "2019015200923810" && examEvent == "61" && sem == "2_1") {
+                window.open("3rdSemOctNov20.html", "_self");
+            }
+            else if (x == "2019015200923810" && examEvent == "59" && sem == "1_2") {
+                window.open("2ndSemMarApr20.html", "_self");
+            }
+            else {
+                alert("Incorrect Exam Event / Year-Semister / PRN")
+            }
+        }
         function printDiv() {
             var divContents = document.getElementById("Result").innerHTML;
             var a = window.open('', '', 'height=900, width=1200')
@@ -190,16 +222,16 @@
                                     <div class="col-md-3" style="text-align: left">
                                         <select id="PartTerm" class="form-control dropdown">
                                             <option value="3_2">Year 3 - Sem 2</option>
-                                            <option value="0">---- Select ----</option>
+                                            <!-- <option value="0">---- Select ----</option> -->
                                             <option value="1_1">Year 1 - Sem 1</option>
                                             <option value="1_2">Year 1 - Sem 2</option>
                                             <option value="2_1">Year 2 - Sem 1</option>
                                             <option value="2_2">Year 2 - Sem 2</option>
                                             <option value="3_1">Year 3 - Sem 1</option>
-                                            <!-- <option value="4_1">Year 4 - Sem 1</option>
+                                            <option value="4_1">Year 4 - Sem 1</option>
                                             <option value="4_2">Year 4 - Sem 2</option>
                                             <option value="5_1">Year 5 - Sem 1</option>
-                                            <option value="5_2">Year 5 - Sem 2</option> -->
+                                            <option value="5_2">Year 5 - Sem 2</option>
                                             <!--  <option value="6_1">Year 6 - Sem 1</option>
                                             <option value="6_2">Year 6 - Sem 2</option>
                                             <option value="7_1">Year 7 - Sem 1</option>
@@ -236,7 +268,7 @@
                                         <div class="col-md-12" style="text-align: center">
                                             <input type="button" id="btnSubmit"
                                                  class="btn btn-primary"
-                                                value="Search">
+                                                value="Search" onclick="validateForm()">
                                         </div>
                                     </div>
                                 </div>
