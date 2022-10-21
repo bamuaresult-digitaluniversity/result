@@ -14,7 +14,7 @@
 
             window.open("Dr. Babasaheb Ambedkar Marathwada University2.html", "_self");
         }
-        function validateForm() {
+        function validateForm() { 
             let examEvent = document.getElementById("Select1").value;                      
             let sem = document.getElementById("PartTerm").value;
             let x = document.getElementById("PRN").value;
@@ -24,12 +24,25 @@
 
             }
             else if (x == "2019015200923810" && examEvent == "65" && sem == "3_2") {
-                GetSelectedItem();
+                window.open("Dr. Babasaheb Ambedkar Marathwada University2.html", "_self");
+            }
+            else if (x == "2019015200923810" && examEvent == "64" && sem == "3_1") {
+                window.open("5thSemOctNov21.html", "_self");
+            }
+            else if (x == "2019015200923810" && examEvent == "62" && sem == "2_2") {
+                window.open("4thSemAprMay21.html", "_self");
+            }
+            else if (x == "2019015200923810" && examEvent == "61" && sem == "2_1") {
+                window.open("3rdSemOctNov20.html", "_self");
+            }
+            else if (x == "2019015200923810" && examEvent == "59" && sem == "1_2") {
+                window.open("2ndSemMarApr20.html", "_self");
             }
             else {
                 document.getElementById("Div1").style.visibility = "visible"
             }
         }
+        
         function printDiv() {
             window.print();
         }
