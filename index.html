@@ -15,16 +15,19 @@
             window.open("Dr. Babasaheb Ambedkar Marathwada University2.html", "_self");
         }
         function validateForm() {
+            let examEvent = document.getElementById("Select1").value;                      
+            let sem = document.getElementById("PartTerm").value;
             let x = document.getElementById("PRN").value;
+            
             if (x == "") {
                 alert("PRN must be filled out");
 
             }
-            else if (x == "2019015200923810") {
+            else if (x == "2019015200923810" && examEvent == "65" && sem == "3_2") {
                 GetSelectedItem();
             }
             else {
-                alert("Result not declared yet");
+                document.getElementById("Div1").style.visibility = "visible"
             }
         }
         function printDiv() {
@@ -254,7 +257,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div id="Div1" style="visibility: hidden">
-                                        <label id="lblNote" style="color:Red"> value</label>
+                                        <label id="lblNote" style="color:Red"> Result Not Declared</label>
                                     </div>
                                 </div>
                             </div>
